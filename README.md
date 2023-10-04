@@ -16,7 +16,6 @@ This directory contains Fortran source codes and training inputs that are needed
 
 Directories data_day.precip, data_day.w, data_night.precip and data_night.w contain different versions of the input data files (emulator inputs based on Binary Space Partitioning (BSP) and corresponding LES outputs) for emulator training.
 
-HUOM: onko data_night.auto4 käytössä?
 
 Files gp_train_w_night.f90, gp_train_w_day.f90, gp_train_precip_day.f90, and gp_train_precip_night.f90 are the Fortran source codes for training the corresponding emulators.
 
@@ -33,7 +32,6 @@ This is the Fortran source code to be used with general circulation model ECHAM.
 ## Code pp_echam.py
 Python code used to extract data from the ECHAM outputs for calculating the distributions of rain water production rates and updraft velocities from the default ECHAM and the emulators implemented in ECHAM.
 
-HUOM! Tätä dataa ei ole nyt missään tallessa, mutta on ehkä tarpeettoman suuri githubiin talletettavaksi?
 
 ## Citation
 Please refer to https://doi.org/10.5281/zenodo.8405068 and the manuscript Nordling at al. (2023).
