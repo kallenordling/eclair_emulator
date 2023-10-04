@@ -10,7 +10,6 @@ Fortran implementation of Gaussian Process Emulator (GPE) is based on the GPF Fo
 These codes are used first in offline emulator training where the emulators (or their parameters) are saved for further use. Then these codes are used to compile ECHAM with the GPE implementation. This allow reading in the saved emulators and computing the outputs. The third use case of the code is emulator validation based on the leave-one-out tests.
 
 ## Directory train
-HUOM: Mikäs tämän hakemiston tarkoitus on? Pitäisikö noiden ./lib ja ./obj hakemistojen olla gpf_master_git:issä? Toki käännetyt koodit, lib:it, *.mod, yms. voi jättää pois, kun ne on konekohtaisia.
 
 ## Directory traininng_and_testing
 This directory contains Fortran source codes and training inputs that are needed to produce the Gaussian Process Emulators for updraft velocity and precipitation tendencies for both day and night.
@@ -21,13 +20,10 @@ HUOM: onko data_night.auto4 käytössä?
 
 Files gp_train_w_night.f90, gp_train_w_day.f90, gp_train_precip_day.f90, and gp_train_precip_night.f90 are the Fortran source codes for training the corresponding emulators.
 
-HUOM: gp_train_precip_night.f90 on tyhjä? Onkohan gp_train_precip_night_plotting.f90 oikea? Tosin input “./data_tmp_2” on erilainen. Mitä muuten ovat nuo *.w, *.f90_backup, ja data_tmp_2 filut?
 
 File test_emu.f90 is the Fortran source code for running the leave-one-out emulator validation tests. The results from these tests are in text files lou_day_precip.dat, lou_day_w.dat, lou_night_precip.dat, and lou_night_w.dat.
 
-HUOM: Noita res*.dat filujahan ei käytetä missään (siis voinee poistaa)?
 
-HUOM: Olisikohan emulaattoriden hyvä olla täällä? Siis ehkä, mutta ei ole pakko.
 
 ## Code mo_emulator.f90
 
